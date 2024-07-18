@@ -25,6 +25,11 @@ public class VehiculoController {
         return ResponseEntity.ok(vehiculoService.obtenerVehiculos());
     }
 
+    @GetMapping("/patente")
+    public ResponseEntity<Vehiculo> obtenerVehiculo(@RequestParam String patente) {
+        return ResponseEntity.ok(vehiculoService.obtenerVehiculo(patente));
+    }
+
     @PutMapping("/")
     public ResponseEntity<Vehiculo> actualizarVehiculo(@RequestParam String patente, @RequestParam Integer kilometraje) {
         return ResponseEntity.ok(vehiculoService.actualizarVehiculo(patente, kilometraje));

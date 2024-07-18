@@ -20,6 +20,10 @@ public class VehiculoService {
         return vehiculoRepository.findAll();
     }
 
+    public Vehiculo obtenerVehiculo(String patente) {
+        return vehiculoRepository.encontrarPorPatente(patente);
+    }
+
     public Vehiculo actualizarVehiculo(String patente, Integer kilometraje) {
         Vehiculo vehiculo = vehiculoRepository.encontrarPorPatente(patente);
         vehiculo.setKilometraje(kilometraje);
