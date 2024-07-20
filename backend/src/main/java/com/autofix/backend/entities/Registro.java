@@ -31,4 +31,6 @@ public class Registro {
     private LocalTime hora_salida;
     private LocalDate fecha_retiro;
     private LocalTime hora_retiro;
+
+    private String patente;
 }
